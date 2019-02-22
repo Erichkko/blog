@@ -3,5 +3,5 @@ server:
   servlet:
     context-path: /zll
 student:
-  name: ÍõË§111
+  name: ç‹å¸…111
   age: 18
