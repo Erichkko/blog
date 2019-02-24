@@ -1,4 +1,4 @@
-package com.zll.blog;
+package com.zll.blog.config;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
