@@ -245,52 +245,52 @@ public class SortInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andNumberEqualTo(Byte value) {
+        public Criteria andNumberEqualTo(Long value) {
             addCriterion("number =", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotEqualTo(Byte value) {
+        public Criteria andNumberNotEqualTo(Long value) {
             addCriterion("number <>", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberGreaterThan(Byte value) {
+        public Criteria andNumberGreaterThan(Long value) {
             addCriterion("number >", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberGreaterThanOrEqualTo(Byte value) {
+        public Criteria andNumberGreaterThanOrEqualTo(Long value) {
             addCriterion("number >=", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberLessThan(Byte value) {
+        public Criteria andNumberLessThan(Long value) {
             addCriterion("number <", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberLessThanOrEqualTo(Byte value) {
+        public Criteria andNumberLessThanOrEqualTo(Long value) {
             addCriterion("number <=", value, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberIn(List<Byte> values) {
+        public Criteria andNumberIn(List<Long> values) {
             addCriterion("number in", values, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotIn(List<Byte> values) {
+        public Criteria andNumberNotIn(List<Long> values) {
             addCriterion("number not in", values, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberBetween(Byte value1, Byte value2) {
+        public Criteria andNumberBetween(Long value1, Long value2) {
             addCriterion("number between", value1, value2, "number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotBetween(Byte value1, Byte value2) {
+        public Criteria andNumberNotBetween(Long value1, Long value2) {
             addCriterion("number not between", value1, value2, "number");
             return (Criteria) this;
         }

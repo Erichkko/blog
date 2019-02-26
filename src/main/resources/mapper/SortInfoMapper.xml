@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.zll.blog.pojo.SortInfo">
     <result column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="number" jdbcType="TINYINT" property="number" />
+    <result column="number" jdbcType="BIGINT" property="number" />
     <result column="create_by" jdbcType="TIMESTAMP" property="create_by" />
     <result column="modified_by" jdbcType="TIMESTAMP" property="modified_by" />
     <result column="is_effective" jdbcType="BIT" property="is_effective" />
@@ -59,7 +59,7 @@
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zll.blog.pojo.SortInfo" useGeneratedKeys="true">
     insert into tbl_sort_info (name, number, create_by, 
       modified_by, is_effective)
-    values (#{name,jdbcType=VARCHAR}, #{number,jdbcType=TINYINT}, #{create_by,jdbcType=TIMESTAMP}, 
+    values (#{name,jdbcType=VARCHAR}, #{number,jdbcType=BIGINT}, #{create_by,jdbcType=TIMESTAMP}, 
       #{modified_by,jdbcType=TIMESTAMP}, #{is_effective,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zll.blog.pojo.SortInfo" useGeneratedKeys="true">
@@ -86,7 +86,7 @@
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="number != null">
-        #{number,jdbcType=TINYINT},
+        #{number,jdbcType=BIGINT},
       </if>
       <if test="create_by != null">
         #{create_by,jdbcType=TIMESTAMP},

@@ -7,7 +7,7 @@ public class SortInfo {
 
     private String name;
 
-    private Byte number;
+    private Long number;
 
     private Date create_by;
 
@@ -31,11 +31,11 @@ public class SortInfo {
         this.name = name == null ? null : name.trim();
     }
 
-    public Byte getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(Byte number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 
