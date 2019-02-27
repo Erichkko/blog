@@ -5,9 +5,9 @@ import java.util.Date;
 public class SortInfo {
     private Long id;
 
-    private String name;
+    private String tb_name;
 
-    private Long number;
+    private Long tb_number;
 
     private Date create_by;
 
@@ -23,20 +23,20 @@ public class SortInfo {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTb_name() {
+        return tb_name;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setTb_name(String tb_name) {
+        this.tb_name = tb_name == null ? null : tb_name.trim();
     }
 
-    public Long getNumber() {
-        return number;
+    public Long getTb_number() {
+        return tb_number;
     }
 
-    public void setNumber(Long number) {
-        this.number = number;
+    public void setTb_number(Long tb_number) {
+        this.tb_number = tb_number;
     }
 
     public Date getCreate_by() {

@@ -3,8 +3,8 @@
 <mapper namespace="com.zll.blog.dao.SortInfoMapper">
   <resultMap id="BaseResultMap" type="com.zll.blog.pojo.SortInfo">
     <result column="id" jdbcType="BIGINT" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="number" jdbcType="BIGINT" property="number" />
+    <result column="tb_name" jdbcType="VARCHAR" property="tb_name" />
+    <result column="tb_number" jdbcType="BIGINT" property="tb_number" />
     <result column="create_by" jdbcType="TIMESTAMP" property="create_by" />
     <result column="modified_by" jdbcType="TIMESTAMP" property="modified_by" />
     <result column="is_effective" jdbcType="BIT" property="is_effective" />
@@ -39,7 +39,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, number, create_by, modified_by, is_effective
+    id, tb_name, tb_number, create_by, modified_by, is_effective
   </sql>
   <select id="selectByExample" parameterType="com.zll.blog.pojo.SortInfoExample" resultMap="BaseResultMap">
     select
@@ -57,19 +57,19 @@
     </if>
   </select>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.zll.blog.pojo.SortInfo" useGeneratedKeys="true">
-    insert into tbl_sort_info (name, number, create_by, 
+    insert into tbl_sort_info (tb_name, tb_number, create_by, 
       modified_by, is_effective)
-    values (#{name,jdbcType=VARCHAR}, #{number,jdbcType=BIGINT}, #{create_by,jdbcType=TIMESTAMP}, 
+    values (#{tb_name,jdbcType=VARCHAR}, #{tb_number,jdbcType=BIGINT}, #{create_by,jdbcType=TIMESTAMP}, 
       #{modified_by,jdbcType=TIMESTAMP}, #{is_effective,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.zll.blog.pojo.SortInfo" useGeneratedKeys="true">
     insert into tbl_sort_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="name != null">
-        name,
+      <if test="tb_name != null">
+        tb_name,
       </if>
-      <if test="number != null">
-        number,
+      <if test="tb_number != null">
+        tb_number,
       </if>
       <if test="create_by != null">
         create_by,
@@ -82,11 +82,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
+      <if test="tb_name != null">
+        #{tb_name,jdbcType=VARCHAR},
       </if>
-      <if test="number != null">
-        #{number,jdbcType=BIGINT},
+      <if test="tb_number != null">
+        #{tb_number,jdbcType=BIGINT},
       </if>
       <if test="create_by != null">
         #{create_by,jdbcType=TIMESTAMP},
@@ -99,4 +99,9 @@
       </if>
     </trim>
   </insert>
+  <update id="updateCategory">
+    update tbl_sort_info
+    set tb_name = #{newName}
+    where tb_name = #{name}
+  </update>
 </mapper>

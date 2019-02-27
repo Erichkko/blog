@@ -165,133 +165,133 @@ public class SortInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNull() {
-            addCriterion("name is null");
+        public Criteria andTb_nameIsNull() {
+            addCriterion("tb_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+        public Criteria andTb_nameIsNotNull() {
+            addCriterion("tb_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+        public Criteria andTb_nameEqualTo(String value) {
+            addCriterion("tb_name =", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+        public Criteria andTb_nameNotEqualTo(String value) {
+            addCriterion("tb_name <>", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+        public Criteria andTb_nameGreaterThan(String value) {
+            addCriterion("tb_name >", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+        public Criteria andTb_nameGreaterThanOrEqualTo(String value) {
+            addCriterion("tb_name >=", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+        public Criteria andTb_nameLessThan(String value) {
+            addCriterion("tb_name <", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+        public Criteria andTb_nameLessThanOrEqualTo(String value) {
+            addCriterion("tb_name <=", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+        public Criteria andTb_nameLike(String value) {
+            addCriterion("tb_name like", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+        public Criteria andTb_nameNotLike(String value) {
+            addCriterion("tb_name not like", value, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+        public Criteria andTb_nameIn(List<String> values) {
+            addCriterion("tb_name in", values, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+        public Criteria andTb_nameNotIn(List<String> values) {
+            addCriterion("tb_name not in", values, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+        public Criteria andTb_nameBetween(String value1, String value2) {
+            addCriterion("tb_name between", value1, value2, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+        public Criteria andTb_nameNotBetween(String value1, String value2) {
+            addCriterion("tb_name not between", value1, value2, "tb_name");
             return (Criteria) this;
         }
 
-        public Criteria andNumberIsNull() {
-            addCriterion("number is null");
+        public Criteria andTb_numberIsNull() {
+            addCriterion("tb_number is null");
             return (Criteria) this;
         }
 
-        public Criteria andNumberIsNotNull() {
-            addCriterion("number is not null");
+        public Criteria andTb_numberIsNotNull() {
+            addCriterion("tb_number is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNumberEqualTo(Long value) {
-            addCriterion("number =", value, "number");
+        public Criteria andTb_numberEqualTo(Long value) {
+            addCriterion("tb_number =", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotEqualTo(Long value) {
-            addCriterion("number <>", value, "number");
+        public Criteria andTb_numberNotEqualTo(Long value) {
+            addCriterion("tb_number <>", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberGreaterThan(Long value) {
-            addCriterion("number >", value, "number");
+        public Criteria andTb_numberGreaterThan(Long value) {
+            addCriterion("tb_number >", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberGreaterThanOrEqualTo(Long value) {
-            addCriterion("number >=", value, "number");
+        public Criteria andTb_numberGreaterThanOrEqualTo(Long value) {
+            addCriterion("tb_number >=", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberLessThan(Long value) {
-            addCriterion("number <", value, "number");
+        public Criteria andTb_numberLessThan(Long value) {
+            addCriterion("tb_number <", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberLessThanOrEqualTo(Long value) {
-            addCriterion("number <=", value, "number");
+        public Criteria andTb_numberLessThanOrEqualTo(Long value) {
+            addCriterion("tb_number <=", value, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberIn(List<Long> values) {
-            addCriterion("number in", values, "number");
+        public Criteria andTb_numberIn(List<Long> values) {
+            addCriterion("tb_number in", values, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotIn(List<Long> values) {
-            addCriterion("number not in", values, "number");
+        public Criteria andTb_numberNotIn(List<Long> values) {
+            addCriterion("tb_number not in", values, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberBetween(Long value1, Long value2) {
-            addCriterion("number between", value1, value2, "number");
+        public Criteria andTb_numberBetween(Long value1, Long value2) {
+            addCriterion("tb_number between", value1, value2, "tb_number");
             return (Criteria) this;
         }
 
-        public Criteria andNumberNotBetween(Long value1, Long value2) {
-            addCriterion("number not between", value1, value2, "number");
+        public Criteria andTb_numberNotBetween(Long value1, Long value2) {
+            addCriterion("tb_number not between", value1, value2, "tb_number");
             return (Criteria) this;
         }
 
