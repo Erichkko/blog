@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -22,11 +23,28 @@ public class CategoryServiceImp implements CategoryService {
     }
 
     @Override
-    public void updateCategory(String name,String newName) {
+    public void deleteCategory(Integer id) {
+        sortInfoMapper.deleteCategory(id);
+    }
+
+    @Override
+    public void updateCategory(Integer name,String newName) {
         Map<String,Object> map  = new HashMap<>();
-        map.put("name",name);
+        map.put("id",name);
         map.put("newName",newName);
        int n =  sortInfoMapper.updateCategory(map);
        System.out.println("n === "+n);
+    }
+
+    @Override
+    public List<SortInfo> searchCategory() {
+        List<SortInfo> sortInfos = sortInfoMapper.searchCategory();
+        System.out.println("size == "+sortInfos.size());
+        return sortInfos;
+    }
+
+    @Override
+    public List<SortInfo> searchCategory(String name) {
+        return sortInfoMapper.searchCategoryByName(name);
     }
 }

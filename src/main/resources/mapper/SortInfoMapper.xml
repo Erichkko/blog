@@ -102,6 +102,21 @@
   <update id="updateCategory">
     update tbl_sort_info
     set tb_name = #{newName}
-    where tb_name = #{name}
+    where id = #{id}
   </update>
+
+  <select id="searchCategory" resultMap="BaseResultMap">
+    select *
+    from tbl_sort_info
+  </select>
+
+  <select id="searchCategoryByName" resultMap="BaseResultMap">
+    select *
+    from tbl_sort_info
+    where tb_name = #{name}
+  </select>
+
+  <delete id="deleteCategory" >
+     delete from tbl_sort_info where id = #{value}
+  </delete>
 </mapper>

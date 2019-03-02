@@ -63,7 +63,7 @@ document.writeln("					<img id=\'logo\' src=\'img/blog-logo.png\' />");
 document.writeln("				</div>");
 document.writeln("");
 document.writeln("				<div id=\'copyright\'>");
-document.writeln("					Copyright @ wmyskxz,Design wmyskxz,2018-20xx");
+document.writeln("					Copyright @ 无业码龙,Design 无业码龙,2018-20xx");
 document.writeln("				</div>");
 document.writeln("			</div>");
 document.writeln("		</nav>");

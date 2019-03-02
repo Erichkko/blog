@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * MyBatis逆向工程生成类
  *
- * @author:wmyskxz
+ * @author:无业码龙
  * @create:2018-06-14-上午 10:10
  */
 public class MybatisGenerator {

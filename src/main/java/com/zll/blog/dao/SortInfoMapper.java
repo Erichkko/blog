@@ -13,4 +13,11 @@ public interface SortInfoMapper {
     List<SortInfo> selectByExample(SortInfoExample example);
 
     int updateCategory(Map<String,Object> map);
+
+    int deleteCategory(Integer value);
+
+    List<SortInfo> searchCategory();
+
+
+    List<SortInfo> searchCategoryByName(String name);
 }

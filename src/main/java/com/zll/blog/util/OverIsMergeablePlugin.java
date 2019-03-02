@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 避免MyBatiis重复生成的工具类
  *
- * @author:wmyskxz
+ * @author:无业码龙
  * @create:2018-06-14-上午 9:50
  */
 public class OverIsMergeablePlugin extends PluginAdapter {
