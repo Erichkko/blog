@@ -108,4 +108,8 @@
       </if>
     </trim>
   </insert>
+  <select id="searchArticleInfoList" resultMap="BaseResultMap">
+    select *
+    from tbl_article_info
+  </select>
 </mapper>

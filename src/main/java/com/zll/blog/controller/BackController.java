@@ -1,12 +1,13 @@
 package com.zll.blog.controller;
 
 
+import com.zll.blog.dto.ArticleDto;
+import com.zll.blog.pojo.ArticleInfo;
 import com.zll.blog.pojo.SortInfo;
-import com.zll.blog.service.CategoryService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
@@ -16,11 +17,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "admin")
+@Api(tags = "后台管理接口")
 public class BackController extends BaseController{
 
     /*分类*/
     @PostMapping("/category/add")
-    @ApiImplicitParam(name = "name", value = "分类信息", required = true, dataType = "String")
+    @ApiImplicitParam(name = "name", value = "分类信息", required = true)
     @ApiOperation("添加分类")
     public String addCategory(@RequestBody String name) {
 
@@ -48,7 +50,7 @@ public class BackController extends BaseController{
             @ApiImplicitParam(name = "newName", value = "新名字", required = true, dataType = "String",paramType = "form")}
     )
 
-    public String updateCategory(@RequestBody String json) {
+    public String updateCategory(@RequestBody() String json) {
 
         Integer id =0;
         String newName =null;
@@ -71,11 +73,20 @@ public class BackController extends BaseController{
     }
 
     @ApiOperation("根据名称查询")
-
     @GetMapping("/category/search/{name11}")
     public List<SortInfo> searchCategoryByName(@PathVariable String name11) {
         return categoryService.searchCategory(name11);
     }
 
+
+
+    /*新增文章*/
+    @ApiOperation("新增文章")
+    @PostMapping("/article/add")
+    @ApiImplicitParam(name = "article" ,value = "文章信息" ,dataType = "ArticleDto")
+    public void addArticle(@RequestBody ArticleDto article){
+        System.out.println("json == ");
+        articleInfoService.addCategory(article);
+    }
 
 }

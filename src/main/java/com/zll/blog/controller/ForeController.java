@@ -1,6 +1,7 @@
 package com.zll.blog.controller;
 
 
+import com.zll.blog.pojo.ArticleInfo;
 import com.zll.blog.pojo.SortInfo;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,5 +18,11 @@ public class ForeController extends BaseController {
     public List<SortInfo> searchAllCategory() {
 
         return  categoryService.searchCategory();
+    }
+    @ApiOperation("查询文章列表")
+    @GetMapping("/article/list")
+    public List<ArticleInfo> searchAllArticleInfo() {
+
+        return  articleInfoService.searchArticleInfo();
     }
 }

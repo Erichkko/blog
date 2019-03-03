@@ -1,13 +1,13 @@
 $(document).ready(function () {
     // 填充博文分类信息
     $.ajax({
-        url: "http://10.2.3.235:80/api/category/list",
+        url: "http://localhost:8082/zll/api/category/list",
         type: "GET",
         dataType: "json",
         success: function (json) {
             $.each(json, function (i, item) {
-                $('#articleCategories').append('<option categoryId="' + item.id + '">' + item.name + '</option>');
-                $('#addCategories').append('<option categoryId="' + item.id + '">' + item.name + '</option>');
+                $('#articleCategories').append('<option categoryId="' + item.id + '">' + item.tb_name + '</option>');
+                $('#addCategories').append('<option categoryId="' + item.id + '">' + item.tb_name + '</option>');
             });
         }
     });
@@ -15,14 +15,14 @@ $(document).ready(function () {
     // 填充博文列表信息
     $.ajax({
         type: "get",
-        url: "http://10.2.3.235:80/api/article/list",
+        url: "http://localhost:8082/zll/api/article/list",
         dataType: "json",
         success: function (json) {
             $.each(json, function (i, item) {
                 $('#tbody-articles').append(
                     '<tr><td>' + +item.id +
                     '</td><td>' + item.title +
-                    '</td><td>' + item.top +
+                    '</td><td>' + item.is_top +
                     '</td><td>' + item.traffic +
                     '</td><td><a href="' + item.pictureUrl + '">点击这里</a></td>' +
                     '<td><button class="btn btn-success" onclick="updateArticle(' + item.id + ')"><i class="fa fa-edit"></i> 编辑</button> ' +
@@ -194,7 +194,7 @@ $('#addArticleBtn').click(function () {
     }
     $.ajax({
         type: "POST",
-        url: "http://10.2.3.235:80/admin/article/",
+        url: "http://localhost:8082/zll/admin/article/add",
         dataType: "json",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify(article),

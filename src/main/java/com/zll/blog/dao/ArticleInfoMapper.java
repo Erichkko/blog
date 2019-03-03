@@ -9,5 +9,8 @@ public interface ArticleInfoMapper {
 
     int insertSelective(ArticleInfo record);
 
+
+    List<ArticleInfo> searchArticleInfoList();
+
     List<ArticleInfo> selectByExample(ArticleInfoExample example);
 }
